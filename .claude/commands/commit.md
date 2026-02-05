@@ -4,14 +4,17 @@
 
 运行 `git diff --name-only HEAD` 和 `git diff --name-only --cached HEAD` 以及 `git ls-files --others --exclude-standard`，找出所有已修改、已暂存或新增的 `.md` 文件。
 
+**排除 `docs-todo/` 目录下的所有文件**——这些是审阅建议，不需要审阅。
+
 如果没有任何 `.md` 文件被修改，告知用户并结束流程。
 
 ## 第二步：逐一审阅
 
-对每个修改过的 `.md` 文件，执行 `/review-doc` 审阅流程：
+对每个修改过的 `.md` 文件（`docs-todo/` 除外），执行 `/review-doc` 审阅流程：
 - 先检查同目录下是否存在对应的 `.meta.json` 文件，如有则读取作为审阅上下文
 - 按 review-doc 的审阅维度（论证逻辑、论据充分性、结构与层次、受众适配性、语言质量）进行审阅
 - 同时检查 CLAUDE.md 中的术语一致性规则和信息隔离规则
+- 读取 `docs-todo/` 下对应的已有审阅建议作为参考
 
 如果存在多个文件，使用并行的 subagent 同时审阅以提高效率。
 
@@ -37,6 +40,6 @@
 ## 第五步：执行提交
 
 如果用户选择直接提交，按照正常的 git commit 流程执行：
-- 将修改的 .md 文件加入暂存区
+- 将修改的 .md 文件加入暂存区（包括 `docs-todo/` 下被 review-doc 更新的文件）
 - 根据修改内容生成合适的 commit message
 - 执行提交

@@ -11,7 +11,21 @@ docs/
   mechanism/
     general_statement.md      # AI 时代社会结构与制度选择（理论愿景）
     alliance_model.md         # 一人公司联盟组织模型（连接理论与实践）
+
+docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
+  business/
+    service-brief.md          # service-brief.md 的待处理审阅建议
+    strategy-internal.md      # strategy-internal.md 的待处理审阅建议
+  mechanism/
+    general_statement.md      # general_statement.md 的待处理审阅建议
+    alliance_model.md         # alliance_model.md 的待处理审阅建议
 ```
+
+### docs-todo/ 规则
+
+- `/review-doc` 每次运行后自动更新对应位置的建议文件（完整覆写，反映当前状态）
+- 路径映射：`docs/X/Y.md` → `docs-todo/X/Y.md`
+- `/commit` 审阅时跳过 `docs-todo/` 下的文件
 
 ### 信息隔离规则
 
