@@ -8,6 +8,8 @@ docs/
     service-brief.md          # 对外简介，给中间人/引荐人（有泄露风险）
     service-brief.meta.json   # 简介的受众、约束、关联文档
     strategy-internal.md      # 内部战略文档，仅限核心团队与投资人（机密）
+    archive/
+      case-fortune-telling.md # AI 算命案例完整展开版备份（从 service-brief.md 移出）
   mechanism/
     general_statement.md      # AI 时代社会结构与制度选择（理论愿景）
     alliance_model.md         # 一人公司联盟组织模型（连接理论与实践）
@@ -67,7 +69,7 @@ docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
 
 - `strategy-internal.md` 引用 `service-brief.md`（第3行、第52行）
 - `service-brief.meta.json` 引用 `strategy-internal.md` 和 `alliance_model.md`
-- `alliance_model.md` 引用 `general_statement.md`（第3行、第7行、资本策略章节）
+- `alliance_model.md` 引用 `general_statement.md`（第3行、第7行、资本策略章节）和 `strategy-internal.md`（第81行）
 - `alliance_model.meta.json` 引用 `general_statement.md`、`service-brief.md` 和 `strategy-internal.md`
 - `general_statement.md` 引用 `alliance_model.md`（第90行）
 
