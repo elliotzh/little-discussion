@@ -23,7 +23,7 @@ docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
 
 ### docs-todo/ 规则
 
-- `/review-doc` 每次运行后自动更新对应位置的建议文件（完整覆写，反映当前状态）
+- `/review-doc` 每次运行后自动更新对应位置的建议文件（完整覆写，反映当前状态）；如所有问题均已解决，则删除该文件
 - 路径映射：`docs/X/Y.md` → `docs-todo/X/Y.md`
 - `/commit` 审阅时跳过 `docs-todo/` 下的文件
 
