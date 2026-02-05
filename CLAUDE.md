@@ -65,7 +65,7 @@ docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
 
 修改文件名或移动文件时，检查以下引用链：
 
-- `strategy-internal.md` 引用 `service-brief.md`（第3行、第51行）
+- `strategy-internal.md` 引用 `service-brief.md`（第3行、第52行）
 - `service-brief.meta.json` 引用 `strategy-internal.md` 和 `alliance_model.md`
 - `alliance_model.md` 引用 `general_statement.md`（第3行、第7行、资本策略章节）
 - `alliance_model.meta.json` 引用 `general_statement.md`、`service-brief.md` 和 `strategy-internal.md`
