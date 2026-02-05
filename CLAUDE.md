@@ -11,6 +11,7 @@ docs/
   mechanism/
     general_statement.md      # AI 时代社会结构与制度选择（理论愿景）
     alliance_model.md         # 一人公司联盟组织模型（连接理论与实践）
+    alliance_model.meta.json  # 联盟模型的受众、范围、关联文档
 
 docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
   business/
@@ -64,10 +65,11 @@ docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
 
 修改文件名或移动文件时，检查以下引用链：
 
-- `strategy-internal.md` 引用 `service-brief.md`（第3行、第50行）
+- `strategy-internal.md` 引用 `service-brief.md`（第3行、第51行）
 - `service-brief.meta.json` 引用 `strategy-internal.md` 和 `alliance_model.md`
-- `alliance_model.md` 引用 `general_statement.md`（第3行、第7行）
-- `general_statement.md` 引用 `alliance_model.md`（第89行）
+- `alliance_model.md` 引用 `general_statement.md`（第3行、第7行、资本策略章节）
+- `alliance_model.meta.json` 引用 `general_statement.md`、`service-brief.md` 和 `strategy-internal.md`
+- `general_statement.md` 引用 `alliance_model.md`（第90行）
 
 ## 编辑文档前
 
