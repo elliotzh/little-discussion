@@ -9,7 +9,7 @@ docs/
     service-brief.meta.json   # 简介的受众、约束、关联文档
     strategy-internal.md      # 内部战略文档，仅限核心团队与投资人（机密）
     archive/
-      case-fortune-telling.md # AI 算命案例完整展开版备份（从 service-brief.md 移出）
+      case-social-media-ops.md # 多语言社交媒体运营案例备份（从 service-brief.md 移出）
   mechanism/
     general_statement.md      # AI 时代社会结构与制度选择（理论愿景）
     alliance_model.md         # 一人公司联盟组织模型（连接理论与实践）
