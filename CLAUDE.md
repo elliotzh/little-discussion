@@ -15,7 +15,6 @@ docs/
     meta.json                    # mechanism/ 下所有文档的共享元数据
   archive/
     case-social-media-ops.md     # 多语言社交媒体运营案例备份（从对外简介移出）
-    case-fortune-telling.md      # AI 算命用户画像增强案例备份（从对外简介移出）
 
 docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
   business/
