@@ -15,6 +15,7 @@ docs/
     meta.json                    # mechanism/ 下所有文档的共享元数据
   archive/
     case-social-media-ops.md     # 多语言社交媒体运营案例备份（从对外简介移出）
+    service-brief-smb-8step-case.md  # SMB 版原始 8 步合作案例备份（精简为 5 阶段前）
 
 docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
   business/
@@ -85,3 +86,4 @@ docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
 2. 参考本文件的术语一致性表
 3. 如修改 `service-brief-enterprise.md` 或 `service-brief-smb.md`，确认不泄露内部敏感信息
 4. 如修改涉及术语变更，同步更新所有相关文档
+5. 重组或精简文档时，有保留价值的内容应迁移到合适的文档（如 `docs/archive/`、内部文档等），而非直接删除
