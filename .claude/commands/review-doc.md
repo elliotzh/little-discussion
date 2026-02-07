@@ -33,7 +33,7 @@
 
 ### 6. 术语一致性与信息隔离（基于 CLAUDE.md）
 - 术语是否符合 CLAUDE.md 中的术语表？
-- 如审阅 `service-brief.md`，是否泄露了应留在内部文档中的敏感信息？
+- 如审阅 `service-brief-enterprise.md` 或 `service-brief-smb.md`，是否泄露了应留在内部文档中的敏感信息？
 
 ### 7. 文档体系一致性（基于 CLAUDE.md）
 - 当前文档是否已在 CLAUDE.md 的「文档体系」目录树中注册？如果是新文件，提示需要补充。

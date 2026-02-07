@@ -5,23 +5,26 @@
 ```
 docs/
   business/
-    service-brief.md          # 对外简介，给中间人/引荐人（有泄露风险）
-    service-brief.meta.json   # 简介的受众、约束、关联文档
-    strategy-internal.md      # 内部战略文档，仅限核心团队与投资人（机密）
-    archive/
-      case-social-media-ops.md # 多语言社交媒体运营案例备份（从 service-brief.md 移出）
+    service-brief-enterprise.md  # 对外简介（中大型企业），给中间人/引荐人（有泄露风险）
+    service-brief-smb.md         # 对外简介（小微企业/一人公司），给中间人/引荐人（有泄露风险）
+    strategy-internal.md         # 内部战略文档，仅限核心团队与投资人（机密）
+    meta.json                    # business/ 下所有文档的共享元数据（受众、约束、关联文档）
   mechanism/
-    general_statement.md      # AI 时代社会结构与制度选择（理论愿景）
-    alliance_model.md         # 一人公司联盟组织模型（连接理论与实践）
-    alliance_model.meta.json  # 联盟模型的受众、范围、关联文档
+    general_statement.md         # AI 时代社会结构与制度选择（理论愿景）
+    alliance_model.md            # 一人公司联盟组织模型（连接理论与实践）
+    meta.json                    # mechanism/ 下所有文档的共享元数据
+  archive/
+    case-social-media-ops.md     # 多语言社交媒体运营案例备份（从对外简介移出）
+    case-fortune-telling.md      # AI 算命用户画像增强案例备份（从对外简介移出）
 
-docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
+docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
   business/
-    service-brief.md          # service-brief.md 的待处理审阅建议
-    strategy-internal.md      # strategy-internal.md 的待处理审阅建议
+    service-brief-enterprise.md  # service-brief-enterprise.md 的待处理审阅建议
+    service-brief-smb.md         # service-brief-smb.md 的待处理审阅建议
+    strategy-internal.md         # strategy-internal.md 的待处理审阅建议
   mechanism/
-    general_statement.md      # general_statement.md 的待处理审阅建议
-    alliance_model.md         # alliance_model.md 的待处理审阅建议
+    general_statement.md         # general_statement.md 的待处理审阅建议
+    alliance_model.md            # alliance_model.md 的待处理审阅建议
 ```
 
 ### docs-todo/ 规则
@@ -30,9 +33,13 @@ docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
 - 路径映射：`docs/X/Y.md` → `docs-todo/X/Y.md`
 - `/commit` 审阅时跳过 `docs-todo/` 下的文件
 
+### 元数据规则
+
+每个文档文件夹有一个 `meta.json`，结构为 `shared`（共享约束）+ `files`（per-file 属性）。编辑文档前先读取对应的 `meta.json`。
+
 ### 信息隔离规则
 
-`service-brief.md` 是对外文档，**不得包含**以下内容（详见 `service-brief.meta.json`）：
+`service-brief-enterprise.md` 和 `service-brief-smb.md` 是对外文档，**不得包含**以下内容（详见 `business/meta.json`）：
 - 完整商业模式和市场节奏判断（在 strategy-internal.md 中）
 - 竞对分析和差异化定位策略（在 strategy-internal.md 中）
 - 技术架构细节（在 strategy-internal.md 中）
@@ -67,15 +74,15 @@ docs-todo/                    # 审阅建议，镜像 docs/ 目录结构
 
 修改文件名或移动文件时，检查以下引用链：
 
-- `strategy-internal.md` 引用 `service-brief.md`（第3行、第52行）
-- `service-brief.meta.json` 引用 `strategy-internal.md` 和 `alliance_model.md`
+- `strategy-internal.md` 引用 `service-brief-enterprise.md` / `service-brief-smb.md`（第3行、第52行、第139行、第156行、第164行、第233行）
+- `business/meta.json` 引用 `strategy-internal.md` 和 `alliance_model.md`
+- `mechanism/meta.json` 引用 `service-brief-enterprise.md`、`service-brief-smb.md` 和 `strategy-internal.md`
 - `alliance_model.md` 引用 `general_statement.md`（第3行、第7行、资本策略章节）和 `strategy-internal.md`（第81行）
-- `alliance_model.meta.json` 引用 `general_statement.md`、`service-brief.md` 和 `strategy-internal.md`
 - `general_statement.md` 引用 `alliance_model.md`（第90行）
 
 ## 编辑文档前
 
-1. 先读取目标文档及其 `.meta.json`（如存在）
+1. 先读取目标文档所在文件夹的 `meta.json`
 2. 参考本文件的术语一致性表
-3. 如修改 `service-brief.md`，确认不泄露内部敏感信息
+3. 如修改 `service-brief-enterprise.md` 或 `service-brief-smb.md`，确认不泄露内部敏感信息
 4. 如修改涉及术语变更，同步更新所有相关文档

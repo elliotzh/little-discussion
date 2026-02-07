@@ -1,5 +1,16 @@
 请执行以下流程来提交修改过的文档：
 
+## 前置步骤：Worktree 同步检查
+
+如果当前目录是一个 git worktree（非主 worktree），执行以下同步：
+
+1. 运行 `git worktree list` 确认当前处于 worktree 中
+2. 运行 `git fetch origin` 获取最新远程状态
+3. 运行 `git rebase main` 将当前分支变基到最新 main 上
+4. 如果 rebase 产生冲突，提示用户处理后再继续
+
+如果当前在主 worktree（main 分支）上，跳过此步骤。
+
 ## 第一步：识别修改的 .md 文件
 
 运行 `git diff --name-only HEAD` 和 `git diff --name-only --cached HEAD` 以及 `git ls-files --others --exclude-standard`，找出所有已修改、已暂存或新增的 `.md` 文件。
@@ -74,3 +85,15 @@
 - 将所有修改的文件加入暂存区（包括 `.md` 文件和 `docs-todo/` 下被更新/删除的文件）
 - 根据修改内容生成合适的 commit message
 - 执行提交
+
+## 第七步：合并回 main 并重置工作空间
+
+如果当前目录是一个 git worktree（非主 worktree），执行以下操作：
+
+1. **获取主 worktree 路径**：从 `git worktree list` 输出中找到主 worktree 的路径
+2. **在主 worktree 中合并**：运行 `git -C <主worktree路径> merge <当前分支名>`
+3. **报告结果**：
+   - 合并成功：告知用户已同步到 main，并运行 `git reset --hard main` 将当前分支重置到 main，使工作空间立即可用于下一个任务
+   - 合并冲突：告知用户需要手动处理，给出具体命令；不执行重置
+
+如果当前在主 worktree 上，跳过此步骤。

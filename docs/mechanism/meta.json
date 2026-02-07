@@ -1,0 +1,32 @@
+{
+  "shared": {
+    "terminology": "见 CLAUDE.md 术语一致性表",
+    "related_docs": {
+      "service-brief-enterprise.md": "对外服务简介（中大型企业），不应包含联盟组织模型内容（docs/business/service-brief-enterprise.md）",
+      "service-brief-smb.md": "对外服务简介（小微企业），不应包含联盟组织模型内容（docs/business/service-brief-smb.md）",
+      "strategy-internal.md": "内部战略文档，包含商业模式和技术架构（docs/business/strategy-internal.md）"
+    }
+  },
+  "files": {
+    "general_statement.md": {
+      "target_audience": "核心团队、潜在联盟成员、对 AI 社会影响感兴趣的读者",
+      "usage": "AI 时代社会结构与制度选择的理论愿景文档",
+      "tone": "理论性、前瞻性，兼顾深度与可读性"
+    },
+    "alliance_model.md": {
+      "target_audience": [
+        "核心团队：理解和迭代联盟的组织模型设计",
+        "潜在联盟成员：了解联盟的结构、成长路径和治理方式",
+        "标准委员会成员：作为治理和标准制定的参考框架"
+      ],
+      "usage": "内部文档，连接 general_statement.md 的理论愿景与具体组织实践。描述联盟的结构、治理、成长路径和经济模型的设计逻辑。",
+      "tone": "直接、分析性、重设计逻辑而非操作细节",
+      "scope": [
+        "文档定位是组织模型设计，不是操作手册。应回答'为什么这样设计'，而非'具体怎么执行'",
+        "筛选标准：写筛选的原则和设计逻辑，不写具体的技能检查清单",
+        "经济模型：写分配逻辑和激励结构，不写具体费率和金额",
+        "成长路径：写每个阶段的定位、目标和关键设计，不写具体的考核指标和时限数字"
+      ]
+    }
+  }
+}
