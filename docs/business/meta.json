@@ -83,9 +83,32 @@
       }
     },
     "service-brief-smb.md": {
-      "target_audience": "小微企业 / 一人公司的非技术背景创始人（1–20 人团队，业务能力强但缺乏技术背景）",
+      "target_audience": "小微企业 / 一人公司的非技术背景创始人（业务能力强但缺乏技术背景）",
       "usage": "直接面向目标客户，帮助创始人理解自身知识资产的价值、当前 AI 利用的结构性障碍及我们的解决方案。文档有泄露风险，不应包含完整商业策略和技术架构。",
       "tone": "专业、清晰、务实，与创始人直接对话，用创始人日常语言描述问题，避免技术术语",
+      "verified_references": [
+        {
+          "line": 7,
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value",
+          "claim": "McKinsey 2025 全球调查：近九成（约 88%）受访企业已在至少一项业务中使用 AI，但仅约 6% 为真正从 AI 获得显著商业价值的 high performers",
+          "verified_date": "2026-02-07",
+          "status": "valid"
+        },
+        {
+          "line": 24,
+          "url": "https://www.salesforce.com/news/stories/smbs-ai-trends-2025/",
+          "claim": "Salesforce 2025 调查（3,350 家中小企业）：使用 AI 的中小企业中 91% 报告收入增长，增长型中小企业将 AI 融入业务流程的比例是停滞型的两倍（66% vs 32%）",
+          "verified_date": "2026-02-07",
+          "status": "valid"
+        },
+        {
+          "line": 84,
+          "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying",
+          "claim": "McKinsey 个性化研究：76% 的消费者在体验千篇一律时感到失望，擅长个性化的公司从中获得的收入比同行高出 40%",
+          "verified_date": "2026-02-07",
+          "status": "valid"
+        }
+      ],
       "constraints": [
         "不暴露完整商业模式和市场节奏判断（已移至 strategy-internal.md）",
         "不暴露竞对分析和差异化定位策略（已移至 strategy-internal.md）",
