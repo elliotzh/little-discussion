@@ -1,5 +1,6 @@
 # Generated files
 *.html
+*.pdf
 
 # OS files
 .DS_Store
