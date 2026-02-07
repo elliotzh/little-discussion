@@ -79,21 +79,13 @@
 
 这个循环确保用户始终可以审查自动修复的内容，并在满意后再提交。
 
-## 第六步：执行提交
+## 第六步：执行提交并同步到 main
 
-如果用户选择直接提交，按照正常的 git commit 流程执行：
-- 将所有修改的文件加入暂存区（包括 `.md` 文件和 `docs-todo/` 下被更新/删除的文件）
-- 根据修改内容生成合适的 commit message
-- 执行提交
+如果用户选择直接提交：
 
-## 第七步：合并回 main 并重置工作空间
-
-如果当前目录是一个 git worktree（非主 worktree），执行以下操作：
-
-1. **获取主 worktree 路径**：从 `git worktree list` 输出中找到主 worktree 的路径
-2. **在主 worktree 中合并**：运行 `git -C <主worktree路径> merge <当前分支名>`
-3. **报告结果**：
-   - 合并成功：告知用户已同步到 main，并运行 `git reset --hard main` 将当前分支重置到 main，使工作空间立即可用于下一个任务
+1. **提交**：将所有修改的文件加入暂存区（包括 `.md` 文件和 `docs-todo/` 下被更新/删除的文件），根据修改内容生成合适的 commit message，执行提交
+2. **同步到 main**（worktree 场景下必须执行，不可跳过）：
+   - 运行 `git worktree list` 判断是否处于 worktree 中；如果当前在主 worktree（main 分支）上，跳过同步
+   - 获取主 worktree 路径，运行 `git -C <主worktree路径> merge <当前分支名>`
+   - 合并成功：告知用户已同步到 main，运行 `git reset --hard main` 将当前分支重置到 main，使工作空间立即可用于下一个任务
    - 合并冲突：告知用户需要手动处理，给出具体命令；不执行重置
-
-如果当前在主 worktree 上，跳过此步骤。
