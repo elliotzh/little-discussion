@@ -16,6 +16,7 @@ docs/
   archive/
     case-social-media-ops.md     # 多语言社交媒体运营案例备份（从对外简介移出）
     service-brief-smb-8step-case.md  # SMB 版原始 8 步合作案例备份（精简为 5 阶段前）
+    service-brief-enterprise-v1-intermediary.md  # Enterprise 版 v1 归档（面向中间人版本，重构前备份）
 
 docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
   business/

@@ -5,8 +5,8 @@
       "核心价值主张是知识资产工程+结果交付，数字员工是交付形式而非产品本身",
       "合作全流程案例展示的是工作方式，不是固定产品——实际服务内容从 pilot 客户的需求出发",
       "论据需注明来源或标注为预估，保持可信度",
-      "不含试点条款、定价细节等销售性内容——文档目的是帮中间人识别客户，不是促成交易",
-      "service-brief-enterprise.md 与 service-brief-smb.md 应保持结构和风格一致：章节编排顺序相同、对应章节的叙事层次和详略程度对齐、行文语气统一——读者拿到任一版本都能获得一致的专业体验"
+      "不含试点条款、定价细节等销售性内容——文档目的是让读者理解我们的服务和适用场景，不是促成交易",
+      "service-brief-enterprise.md 与 service-brief-smb.md 应保持结构和风格一致：章节编排顺序相同、对应章节的叙事层次和详略程度对齐、行文语气统一——读者拿到任一版本都能获得一致的专业体验。注意：enterprise 版已重构为「问题→理想→障碍→方案→案例→适用总结」结构，SMB 版尚未跟进，两个版本暂时结构不对齐，待 SMB 版后续调整"
     ],
     "related_docs": {
       "strategy-internal.md": "内部战略文档，包含完整商业模式、竞争分析、技术架构，仅限核心团队与投资人",
@@ -15,12 +15,19 @@
   },
   "files": {
     "service-brief-enterprise.md": {
-      "target_audience": "中间人 / 引荐人：人脉丰富，帮我们介绍适合 pilot 的中大型标杆客户",
-      "usage": "提供给中间人，帮助其理解我们做什么、适合引荐什么样的中大型企业客户。文档有泄露风险，不应包含完整商业策略和技术架构。",
-      "tone": "专业、清晰、务实，让非技术背景的中间人也能快速理解并转述",
+      "target_audience": "中大型企业决策者（CXO/VP 级别）；中间人可作为传递渠道",
+      "usage": "直接面向企业决策者，帮助其理解知识断层风险及我们的解决方案。中间人可作为传递渠道，但文档不为中间人量身写作。文档有泄露风险，不应包含完整商业策略和技术架构。",
+      "tone": "专业、清晰、务实，与决策者直接对话，用决策者日常语言描述问题",
       "verified_references": [
         {
-          "line": 15,
+          "line": 9,
+          "url": "https://www.gartner.com/en/newsroom/press-releases/2025-02-26-lack-of-ai-ready-data-puts-ai-projects-at-risk",
+          "claim": "到 2026 年底，缺乏 AI-ready data 支撑的 AI 项目中将有 60% 被放弃",
+          "verified_date": "2026-02-07",
+          "status": "pending"
+        },
+        {
+          "line": 23,
           "url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025",
           "claim": "到 2026 年底 40% 企业应用集成任务型 AI Agent",
           "verified_date": "2026-02-07",
@@ -32,10 +39,8 @@
         "不暴露竞对分析和差异化定位策略（已移至 strategy-internal.md）",
         "不暴露技术架构细节（已移至 strategy-internal.md）",
         "不暴露联盟组织模型（已移至 alliance_model.md）",
-        "重点帮中间人识别适合的客户，而非说服中间人本人",
-        "客户特征/引荐信号必须从中间人的可观测性出发——中间人只能感知社交场合中听到的对话信号，无法了解企业内部运作细节",
-        "不暴露个人联系方式（文档有泄露风险，引荐通过中间人微信拉群完成）",
-        "行动指引（引荐下一步）通过场外沟通传达，不放入文档/PPT中——书面感太强"
+        "不暴露定价公式细节（'基础费+效果分成'的具体结构不出现在对外文档中）",
+        "不暴露个人联系方式（文档有泄露风险）"
       ]
     },
     "service-brief-smb.md": {
