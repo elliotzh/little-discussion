@@ -14,9 +14,8 @@
 
 ## 第二步：执行 rebase
 
-1. 运行 `git fetch origin` 获取最新远程状态
-2. 运行 `git rebase main`
-3. 如果 rebase 成功（无冲突），跳到第四步
+1. 直接运行 `git rebase main`（基于本地 main 分支，不执行 fetch）
+2. 如果 rebase 成功（无冲突），跳到第四步
 
 ## 第三步：处理冲突
 
