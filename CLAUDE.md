@@ -6,6 +6,7 @@
 docs/
   business/
     service-brief-enterprise.md  # 对外简介（中大型企业），面向企业决策者（有泄露风险）
+    service-brief-enterprise-v2.md  # 对外简介 v2（中大型企业），成本视角重构草稿（有泄露风险）
     service-brief-smb.md         # 对外简介（小微企业/一人公司），面向非技术背景创始人（有泄露风险）
     strategy-internal.md         # 内部战略文档，仅限核心团队与投资人（机密）
     meta.json                    # business/ 下所有文档的共享元数据（受众、约束、关联文档）
