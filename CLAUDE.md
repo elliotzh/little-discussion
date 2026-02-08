@@ -6,7 +6,6 @@
 docs/
   business/
     service-brief-enterprise.md  # 对外简介（中大型企业），面向企业决策者（有泄露风险）
-    service-brief-enterprise-v2.md  # 对外简介 v2（中大型企业），成本视角重构草稿（有泄露风险）
     service-brief-smb.md         # 对外简介（小微企业/一人公司），面向非技术背景创始人（有泄露风险）
     strategy-internal.md         # 内部战略文档，仅限核心团队与投资人（机密）
     meta.json                    # business/ 下所有文档的共享元数据（受众、约束、关联文档）
@@ -18,12 +17,11 @@ docs/
     case-social-media-ops.md     # 多语言社交媒体运营案例备份（从对外简介移出）
     service-brief-smb-8step-case.md  # SMB 版原始 8 步合作案例备份（精简为 5 阶段前）
     service-brief-enterprise-v1-intermediary.md  # Enterprise 版 v1 归档（面向中间人版本，重构前备份）
+    service-brief-enterprise-v2-knowledge-asset-framing.md  # Enterprise 版 v2 归档（知识资产视角版，成本视角重构前备份）
     service-brief-smb-v2-pre-restructure.md  # SMB 版 v2 归档（竞争壁垒视角重构前备份）
 
 docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
   business/
-    service-brief-enterprise.md  # service-brief-enterprise.md 的待处理审阅建议
-    service-brief-smb.md         # service-brief-smb.md 的待处理审阅建议
     strategy-internal.md         # strategy-internal.md 的待处理审阅建议
   mechanism/
     general_statement.md         # general_statement.md 的待处理审阅建议
@@ -57,7 +55,7 @@ docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
 | 概念 | 正确表述 | 禁止表述 | 说明 |
 |------|---------|---------|------|
 | 数据安全（升级概念） | 知识资产主权 | 数据安全、数据不出企业边界 | 不只是防泄露，是保护和经营企业核心竞争壁垒 |
-| 产品定位 | 知识资产建设 + 数字员工交付 | 岗位级标准化模块、SaaS 产品 | 知识资产建设是核心价值，数字员工是交付形式 |
+| 产品定位 | 知识资产建设 + 数字员工交付 | 岗位级标准化模块、SaaS 产品 | 知识资产建设是核心价值，数字员工是交付形式。对外文档中不使用"知识资产建设"这一标签，改用白话描述机制（如"让业务知识在日常工作中自然积累"） |
 | 数字员工角色 | 交付形态 | 产品本身、产品化封装 | 数字员工是交付手段，不是我们卖的产品 |
 | 定价模式 | 结果绑定定价 | 订阅制、模块订阅 | 按可验证的业务结果收费 |
 | 混合云价值 | 知识资产主权架构 | 数据安全架构 | 架构核心目标是保障知识资产主权 |
@@ -65,7 +63,7 @@ docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
 ### 术语层级
 
 - **知识资产**：核心战略概念，企业知识作为资产类别
-- **知识资产建设**：持续性过程，通过数字员工嵌入工作流使知识自然积累
+- **知识资产建设**：持续性过程，通过数字员工嵌入工作流使知识自然积累（内部术语，对外文档中用白话描述机制，不使用此标签）
 - **知识资产主权**：治理原则，企业保有知识资产的完全控制权
 - **结构化知识资产**：建设产出物，AI 可消费的形式
 
@@ -77,8 +75,7 @@ docs-todo/                       # 审阅建议，镜像 docs/ 目录结构
 
 修改文件名或移动文件时，检查以下引用链：
 
-- `strategy-internal.md` 引用 `service-brief-enterprise.md` / `service-brief-smb.md`（第3行、第52行、第139行、第148行、第176行、第184行、第204行、第244行、第274行）
-- `strategy-internal.md` 引用 `service-brief-enterprise-v2.md`（第278行、第482行）
+- `strategy-internal.md` 引用 `service-brief-enterprise.md` / `service-brief-smb.md`（第3行、第52行、第139行、第148行、第176行、第184行、第204行、第244行、第274行、第278行、第482行）
 - `business/meta.json` 引用 `strategy-internal.md` 和 `alliance_model.md`
 - `mechanism/meta.json` 引用 `service-brief-enterprise.md`、`service-brief-smb.md` 和 `strategy-internal.md`
 - `alliance_model.md` 引用 `general_statement.md`（第3行、第7行、资本策略章节）和 `strategy-internal.md`（第81行）

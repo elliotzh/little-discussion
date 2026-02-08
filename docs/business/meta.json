@@ -2,11 +2,11 @@
   "shared": {
     "terminology": "见 CLAUDE.md 术语一致性表",
     "constraints": [
-      "核心价值主张是知识资产建设+结果交付，数字员工是交付形式而非产品本身",
+      "核心价值主张是知识资产建设+结果交付，数字员工是交付形式而非产品本身。对外文档中不使用'知识资产建设'标签，改用白话描述机制（如'让业务知识在日常工作中自然积累'）",
       "合作全流程案例展示的是工作方式，不是固定产品——实际服务内容从 pilot 客户的需求出发",
       "论据需注明来源或标注为预估，保持可信度",
       "不含试点条款、定价细节等销售性内容——文档目的是让读者理解我们的服务和适用场景，不是促成交易",
-      "service-brief-enterprise.md 与 service-brief-smb.md 应保持结构和风格一致：章节编排顺序相同（问题→理想→障碍→方案→案例→适用总结）、对应章节的叙事层次和详略程度对齐、行文语气统一——读者拿到任一版本都能获得一致的专业体验。两个版本共享同一叙事骨架，但锚点不同：enterprise 版从「组织效率瓶颈」切入，SMB 版从「竞争壁垒焦虑」切入；enterprise 版有 3 个障碍（含知识资产主权），SMB 版有 2 个障碍（小微企业对知识资产主权的顾虑权重较低）",
+      "service-brief-enterprise.md 与 service-brief-smb.md 应保持结构和风格一致：章节编排顺序相同（问题→理想→障碍→方案→案例→适用总结）、对应章节的叙事层次和详略程度对齐、行文语气统一——读者拿到任一版本都能获得一致的专业体验。两个版本共享同一叙事骨架，但锚点不同：enterprise 版从「知识获取成本」切入，SMB 版从「竞争壁垒焦虑」切入；enterprise 版以成本视角呈现 3 个障碍（准备、建设、运维），SMB 版有 2 个障碍（小微企业对知识资产主权的顾虑权重较低）",
       "对外文档（service-brief-enterprise.md / service-brief-smb.md）避免使用技术术语，优先用受众日常语言表达同一含义。常见需替换的术语：'结构化'→'整理'、'AI 可消费'→'AI 能用'、'生产级'→'实际业务'、'知识工程'→'知识梳理'。技术术语仅在内部文档（strategy-internal.md）中使用"
     ],
     "related_docs": {
@@ -15,7 +15,7 @@
     },
     "presentation_guidance": {
       "terminology_simplification": {
-        "知识资产建设": "核心含义是'让业务经验的积累成为日常工作的自然结果'——不是一次性整理，而是数字员工嵌入工作流后知识持续回流的机制。首次出现时强调持续性，避免让受众误解为一次性的文档梳理项目。",
+        "知识资产建设": "内部术语，对外文档中不使用此标签。用白话描述核心含义：'让业务经验的积累成为日常工作的自然结果'——不是一次性整理，而是数字员工嵌入工作流后知识持续回流的机制。",
         "数字员工": "强调'绑定具体岗位的 AI 角色，可像人类员工一样管理和评估'，避免等同于通用 AI 工具或聊天机器人。",
         "结果绑定定价": "用'按效果收费'作为通俗替代，核心信息是'不见效果，不收溢价'。",
         "知识资产主权": "用'企业的知识始终在自己手中'作为通俗表达。"
@@ -25,41 +25,55 @@
   "files": {
     "service-brief-enterprise.md": {
       "target_audience": "中大型企业决策者（CXO/VP 级别）；中间人可作为传递渠道",
-      "usage": "直接面向企业决策者，帮助其理解知识断层风险及我们的解决方案。中间人可作为传递渠道，但文档不为中间人量身写作。文档有泄露风险，不应包含完整商业策略和技术架构。",
+      "usage": "直接面向企业决策者，以成本视角切入，帮助其理解知识获取的成本障碍及我们的解决方案。中间人可作为传递渠道。文档有泄露风险，不应包含完整商业策略和技术架构。",
       "tone": "专业、清晰、务实，与决策者直接对话，用决策者日常语言描述问题",
       "verified_references": [
         {
-          "line": 7,
+          "line": 9,
           "url": "https://www.globenewswire.com/news-release/2022/03/29/2411985/0/en/Fruitless-Searching-Irrelevant-Information-Inefficient-Tools-Contribute-To-Great-Resignation.html",
           "claim": "Coveo 2022 调查（英美 4,000 名企业员工）：员工平均每天花 3.6 小时搜索工作所需信息",
           "verified_date": "2026-02-07",
           "status": "valid"
         },
         {
-          "line": 11,
-          "url": "https://www.gartner.com/en/newsroom/press-releases/2025-02-26-lack-of-ai-ready-data-puts-ai-projects-at-risk",
-          "claim": "63% 的企业缺乏或不确定是否具备 AI 所需的数据管理实践（Q3 2024 调查，248 名数据管理负责人）；缺乏 AI-ready data 支撑的 AI 项目中将有 60% 被放弃（预测至 2026 年底）",
-          "verified_date": "2026-02-07",
-          "status": "valid"
-        },
-        {
-          "line": 19,
+          "line": 25,
           "url": "https://www.ibm.com/case-studies/ibm-askhr",
           "claim": "IBM AskHR: 7,000 页政策知识，2024 年 1,150 万次交互，94% 自动解决，四年 HR 运营成本降低 40%",
           "verified_date": "2026-02-07",
           "status": "valid"
         },
         {
-          "line": 79,
-          "url": "https://www.ibm.com/case-studies/ibm-askhr",
-          "claim": "IBM AskHR: 上线后 HR 支持工单量减少 75%，2022-2024 年相关业务处理效率持续提升最高达 75%",
+          "line": 38,
+          "url": "https://www.gartner.com/en/newsroom/press-releases/2024-07-29-gartner-predicts-30-percent-of-generative-ai-projects-will-be-abandoned-after-proof-of-concept-by-end-of-2025",
+          "claim": "Gartner 2024 年 7 月预测：到 2025 年底至少 30% 的生成式 AI 项目将在概念验证后被放弃",
+          "verified_date": "2026-02-08",
+          "status": "valid"
+        },
+        {
+          "line": 40,
+          "url": "https://xenoss.io/blog/total-cost-of-ownership-for-enterprise-ai",
+          "claim": "Xenoss 2025 TCO 分析：数据工程占 AI 项目总支出 25%-40%；自建方案初始投入 50 万-200 万美元，集成溢价 2-3 倍；AI 系统日常维护每年增加 15%-30% 运营开销，年度维护成本可达初始投入的 30%-40%",
+          "verified_date": "2026-02-08",
+          "status": "valid"
+        },
+        {
+          "line": 54,
+          "url": "https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2020/knowledge-management-strategy.html",
+          "claim": "Deloitte 2020 Global Human Capital Trends（119 个国家近 9,000 名管理者）：75% 认为知识管理重要或非常重要，仅 9% 认为已准备好应对；主要障碍在组织和人——孤岛（55%）、缺乏激励（37%）、缺乏要求（35%）",
+          "verified_date": "2026-02-08",
+          "status": "valid"
+        },
+        {
+          "line": 62,
+          "url": "https://www.workera.ai/blog/the-5-5-trillion-skills-gap-what-idcs-new-report-reveals-about-ai-workforce-readiness",
+          "claim": "IDC 2024 调查：仅 1/3 企业认为已为 AI 转型做好准备，到 2026 年超过 90% 全球企业将面临关键 AI 技能短缺",
           "verified_date": "2026-02-07",
           "status": "valid"
         },
         {
-          "line": 31,
-          "url": "https://www.workera.ai/blog/the-5-5-trillion-skills-gap-what-idcs-new-report-reveals-about-ai-workforce-readiness",
-          "claim": "IDC 2024 调查：仅 1/3 企业认为已为 AI 转型做好准备，到 2026 年超过 90% 全球企业将面临关键 AI 技能短缺",
+          "line": 102,
+          "url": "https://www.ibm.com/case-studies/ibm-askhr",
+          "claim": "IBM AskHR: 上线后 HR 支持工单量减少 75%，2022-2024 年相关业务处理效率持续提升最高达 75%",
           "verified_date": "2026-02-07",
           "status": "valid"
         }
@@ -74,7 +88,18 @@
         "服务方为精干团队，文档应避免暗示需要大团队或高劳动密集度才能交付的表述——方案可行性应体现在方法论和机制设计上，而非人力投入规模"
       ],
       "presentation_guidance": {
-        "narrative_structure": "严格按照文档的章节顺序组织 slides：痛点→理想图景（含 IBM AskHR 案例作为验证）→落地障碍→解决方案→案例→适用总结。IBM 案例必须出现在理想图景部分，作为'方向已被验证'的证据，不得推迟到后面。",
+        "narrative_structure": "按文档章节顺序组织 slides：痛点→理想图景（含 IBM AskHR 案例）→成本障碍→化解方案→常见路径局限→我们的方案→案例→适用总结。IBM 案例必须在理想图景部分出现。",
+        "sections_3_4_slides": {
+          "principle": "先蓄压再释放：三个障碍全部铺完后再转折到解决方案。化解阶段用视觉提示回顾对应障碍，但不把障碍与解法交替呈现",
+          "recommended_layout": [
+            "障碍总览 slide：'为什么还没做到'——成本是核心障碍，Gartner 30% 数据做标题级引用",
+            "障碍 slide（1-2 页）：前期准备（25%-40%）、系统建设（50-200万 + 2-3倍溢价）、持续运行（15%-30%年运维），各带关键数字",
+            "转折 slide：'技术进步正在改变这个等式'——从重度前置投入转向最小范围启动、持续完善",
+            "化解 slide（1-2 页）：三个化解方案，每个旁边用关键词简要回顾对应障碍作为视觉提示（如'← 前期 25%-40%'），但不重新展开障碍内容",
+            "常见路径 slide：自建/外包/云平台各一句局限",
+            "我们的方案 slide：知识留企业 + 云端升级 + 持续投入"
+          ]
+        },
         "architecture_accuracy": [
           "知识资产和业务数据留在企业自有环境中",
           "管控与升级能力由云端提供，不接触企业知识资产和业务数据",
@@ -118,90 +143,6 @@
         "不暴露个人联系方式（文档有泄露风险）",
         "服务方为精干团队，文档应避免暗示需要大团队或高劳动密集度才能交付的表述——方案可行性应体现在方法论和机制设计上，而非人力投入规模"
       ]
-    },
-    "service-brief-enterprise-v2.md": {
-      "target_audience": "中大型企业决策者（CXO/VP 级别）；中间人可作为传递渠道",
-      "usage": "对外简介 v2 草稿，以成本视角重构叙事（问题→理想→成本障碍→技术进步+方案→案例→适用总结）。与 v1 并行存在，待迭代成熟后决定是否替代。文档有泄露风险，不应包含完整商业策略和技术架构。",
-      "tone": "专业、清晰、务实，与决策者直接对话，用决策者日常语言描述问题",
-      "verified_references": [
-        {
-          "line": 9,
-          "url": "https://www.globenewswire.com/news-release/2022/03/29/2411985/0/en/Fruitless-Searching-Irrelevant-Information-Inefficient-Tools-Contribute-To-Great-Resignation.html",
-          "claim": "Coveo 2022 调查（英美 4,000 名企业员工）：员工平均每天花 3.6 小时搜索工作所需信息",
-          "verified_date": "2026-02-07",
-          "status": "valid"
-        },
-        {
-          "line": 23,
-          "url": "https://www.ibm.com/case-studies/ibm-askhr",
-          "claim": "IBM AskHR: 7,000 页政策知识，2024 年 1,150 万次交互，94% 自动解决，四年 HR 运营成本降低 40%",
-          "verified_date": "2026-02-07",
-          "status": "valid"
-        },
-        {
-          "line": 36,
-          "url": "https://www.gartner.com/en/newsroom/press-releases/2024-07-29-gartner-predicts-30-percent-of-generative-ai-projects-will-be-abandoned-after-proof-of-concept-by-end-of-2025",
-          "claim": "Gartner 2024 年 7 月预测：到 2025 年底至少 30% 的生成式 AI 项目将在概念验证后被放弃",
-          "verified_date": "2026-02-08",
-          "status": "valid"
-        },
-        {
-          "line": 38,
-          "url": "https://xenoss.io/blog/total-cost-of-ownership-for-enterprise-ai",
-          "claim": "Xenoss 2025 TCO 分析：数据工程占 AI 项目总支出 25%-40%；自建方案初始投入 50 万-200 万美元，集成溢价 2-3 倍；AI 系统日常维护每年增加 15%-30% 运营开销，年度维护成本可达初始投入的 30%-40%",
-          "verified_date": "2026-02-08",
-          "status": "valid"
-        },
-        {
-          "line": 52,
-          "url": "https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2020/knowledge-management-strategy.html",
-          "claim": "Deloitte 2020 Global Human Capital Trends（119 个国家近 9,000 名管理者）：75% 认为知识管理重要或非常重要，仅 9% 认为已准备好应对；主要障碍在组织和人——孤岛（55%）、缺乏激励（37%）、缺乏要求（35%）",
-          "verified_date": "2026-02-08",
-          "status": "valid"
-        },
-        {
-          "line": 60,
-          "url": "https://www.workera.ai/blog/the-5-5-trillion-skills-gap-what-idcs-new-report-reveals-about-ai-workforce-readiness",
-          "claim": "IDC 2024 调查：仅 1/3 企业认为已为 AI 转型做好准备，到 2026 年超过 90% 全球企业将面临关键 AI 技能短缺",
-          "verified_date": "2026-02-07",
-          "status": "valid"
-        },
-        {
-          "line": 100,
-          "url": "https://www.ibm.com/case-studies/ibm-askhr",
-          "claim": "IBM AskHR: 上线后 HR 支持工单量减少 75%，2022-2024 年相关业务处理效率持续提升最高达 75%",
-          "verified_date": "2026-02-07",
-          "status": "valid"
-        }
-      ],
-      "constraints": [
-        "不暴露完整商业模式和市场节奏判断（已移至 strategy-internal.md）",
-        "不暴露竞对分析和差异化定位策略（已移至 strategy-internal.md）",
-        "不暴露技术架构细节（已移至 strategy-internal.md）",
-        "不暴露联盟组织模型（已移至 alliance_model.md）",
-        "不暴露定价公式细节（'基础费+效果分成'的具体结构不出现在对外文档中）",
-        "不暴露个人联系方式（文档有泄露风险）",
-        "服务方为精干团队，文档应避免暗示需要大团队或高劳动密集度才能交付的表述——方案可行性应体现在方法论和机制设计上，而非人力投入规模"
-      ],
-      "presentation_guidance": {
-        "narrative_structure": "按文档章节顺序组织 slides：痛点→理想图景（含 IBM AskHR 案例）→成本障碍→化解方案→常见路径局限→我们的方案→案例→适用总结。IBM 案例必须在理想图景部分出现。",
-        "sections_3_4_slides": {
-          "principle": "先蓄压再释放：三个障碍全部铺完后再转折到解决方案。化解阶段用视觉提示回顾对应障碍，但不把障碍与解法交替呈现",
-          "recommended_layout": [
-            "障碍总览 slide：'为什么还没做到'——成本是核心障碍，Gartner 30% 数据做标题级引用",
-            "障碍 slide（1-2 页）：前期准备（25%-40%）、系统建设（50-200万 + 2-3倍溢价）、持续运行（15%-30%年运维），各带关键数字",
-            "转折 slide：'技术进步正在改变这个等式'——从重度前置投入转向最小范围启动、持续完善",
-            "化解 slide（1-2 页）：三个化解方案，每个旁边用关键词简要回顾对应障碍作为视觉提示（如'← 前期 25%-40%'），但不重新展开障碍内容",
-            "常见路径 slide：自建/外包/云平台各一句局限",
-            "我们的方案 slide：知识留企业 + 云端升级 + 持续投入"
-          ]
-        },
-        "architecture_accuracy": [
-          "知识资产和业务数据留在企业自有环境中",
-          "管控与升级能力由云端提供，不接触企业知识资产和业务数据",
-          "禁止出现'知识资产上传到云端''业务数据离开企业'等表述"
-        ]
-      }
     },
     "strategy-internal.md": {
       "target_audience": "核心团队与投资人",
