@@ -23,11 +23,15 @@
 如果 rebase 产生冲突：
 
 1. 运行 `git diff --name-only --diff-filter=U` 列出所有冲突文件
-2. 对每个冲突文件：
+2. 收集冲突相关的 commit message 以理解改动意图：
+   - 运行 `git log --oneline main..REBASE_HEAD` 查看当前分支上正在被 rebase 的 commit
+   - 运行 `git log --oneline REBASE_HEAD..main` 查看 main 上的新 commit
+   - 对于每个冲突文件，可进一步运行 `git log --oneline main..REBASE_HEAD -- <文件>` 和 `git log --oneline REBASE_HEAD..main -- <文件>` 查看该文件相关的 commit
+3. 对每个冲突文件：
    - 读取文件内容，找到所有冲突标记（`<<<<<<<`、`=======`、`>>>>>>>`）
-   - 分析冲突双方的意图：
-     - **当前分支（HEAD）的改动**：做了什么、为什么
-     - **main 的改动**：做了什么、为什么
+   - 结合 commit message 和文件内容，分析冲突双方的意图：
+     - **当前分支（HEAD）的改动**：做了什么、为什么（引用相关 commit message）
+     - **main 的改动**：做了什么、为什么（引用相关 commit message）
    - 给出解决方案（resolve proposal），说明推荐如何合并及理由
 3. 汇总所有冲突文件的解决方案，格式如下：
 
