@@ -5,9 +5,8 @@
 如果当前目录是一个 git worktree（非主 worktree），执行以下同步：
 
 1. 运行 `git worktree list` 确认当前处于 worktree 中
-2. 运行 `git fetch origin` 获取最新远程状态
-3. 运行 `git rebase main` 将当前分支变基到最新 main 上
-4. 如果 rebase 产生冲突，提示用户处理后再继续
+2. 运行 `git rebase main` 将当前分支变基到最新本地 main 上
+3. 如果 rebase 产生冲突，提示用户处理后再继续
 
 如果当前在主 worktree（main 分支）上，跳过此步骤。
 
